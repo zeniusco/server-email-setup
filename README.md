@@ -94,21 +94,11 @@ echo -e "To: you@yourdomain.com\nSubject: Debug Test\n\nBody" \
 
 ---
 
-## 7) Optional: Per-user configuration
 
-- You can create `/home/USERNAME/.msmtprc` for user‑specific SMTP.
-- System uses `/etc/msmtprc` unless overridden by a user’s `~/.msmtprc`.
-
----
-
-## 8) Security notes
+## Security notes
 
 - Keep `/etc/msmtprc` readable (644) and owned by root; do not expose passwords publicly.
 - Prefer app passwords over primary account passwords.
-
----
-
-
 - Test:      `echo "body" | mail -s "Subject" you@yourdomain.com`
 - Use:       Put `mail` calls in cron/scripts (with `||` to notify on error)
 - Logs:      `~/.msmtp.log` per user
