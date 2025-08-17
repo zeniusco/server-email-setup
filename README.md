@@ -14,6 +14,7 @@ This guide configures your server to send emails through a third‑party SMTP pr
 sudo apt-get update
 sudo apt-get install msmtp msmtp-mta mailutils
 ```
+- Select **Yes** to enable AppArmor support, if asked.
 - msmtp: lightweight SMTP client
 - msmtp-mta: makes msmtp the system’s default sendmail
 - mailutils: provides the `mail` command
